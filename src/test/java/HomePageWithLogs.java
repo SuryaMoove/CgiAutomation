@@ -25,7 +25,7 @@ public class HomePageWithLogs extends Reporter{
         test.log(LogStatus.INFO, "Home Page Test Started");
         }
 
-        @BeforeMethod
+        @BeforeMethod(groups = {"Smoke Test"})
         void setUp(){
             System.setProperty("webdriver.chrome.driver", driverPath);
             System.setProperty("webdriver.http.factory", "jdk-http-client");
@@ -39,7 +39,7 @@ public class HomePageWithLogs extends Reporter{
             homePage = new HomePage(driver);
         }
 
-        @Test(priority = 0)
+        @Test(priority = 0, groups = {"Functional Test"})
         void verifyLogoLink() {
             test = reports.startTest("Logo Link Test Started");
 
@@ -57,7 +57,7 @@ public class HomePageWithLogs extends Reporter{
             }
         }
 
-        @Test(priority = 1)
+        @Test(priority = 1, groups = {"Functional Test"}, enabled = false)
         void verifySearchButton() throws InterruptedException {
             test = reports.startTest("Search Button Test Started");
 
