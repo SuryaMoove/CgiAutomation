@@ -13,13 +13,13 @@ public class HomePage {
     @FindBy(how = How.ID, using = "Calque_1")
     WebElement lnkLogo;
 
-    @FindBy(how = How.CLASS_NAME, using = "search-icon-btn")
+    @FindBy(how = How.XPATH, using = "//*[contains(@aria-label,'Search terms')]")
     WebElement btnSearch;
 
     @FindBy(how = How.ID, using = "edit-keyword")
     WebElement txtBox;
 
-    @FindBy(how = How.CLASS_NAME, using = "close-search")
+    @FindBy(how = How.XPATH, using = "//*[contains(@aria-label,'Close search bar')]")
     WebElement btnSearchClose;
 
     @FindBy(how = How.XPATH, using = "//button[@aria-label='Access to main navigation']")
@@ -52,15 +52,15 @@ public class HomePage {
     @FindBy(how = How.XPATH, using = "//*[@id='mm-6']/div/a[1]")
     WebElement btnIndustriesBack;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='mm-1']/ul/li[4]/a")
+    @FindBy(how = How.XPATH, using = "//*[contains(text(),'Mergers')]")
     WebElement lnkMergers;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='mm-1']/ul/li[5]/a")
+    @FindBy(how = How.XPATH, using = "//*[contains(text(),'Insights')]")
     WebElement lnkInsights;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='mm-1']/ul/li[6]/a")
+    @FindBy(how = How.XPATH, using = "//a[@title='Careers']")
     WebElement lnkCareers;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='mm-1']/ul/li[7]/a")
+    @FindBy(how = How.XPATH, using = "//a[@alt='Contact']")
     WebElement lnkContact;
 }

@@ -8,11 +8,13 @@ public class Reporter {
     @BeforeTest
     ExtentReports setReport(){
         reports = new ExtentReports(System.getProperty("user.dir") + "/ExtentReports/CgiAutomation Report.html");
+        //giving the filepath and file name to store the reports
         return reports;
     }
 
     @AfterMethod
     void endReport(){
-        reports.flush();
+        reports.flush(); //to erase any previous data and creates a whole new report
     }
+
 }
